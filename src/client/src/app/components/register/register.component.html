@@ -1,0 +1,35 @@
+<!-- <section class="register"> -->
+  <div class="app">
+   <div class="login-page">
+    <div class="form">
+      <img
+        class="header__logo"
+        src="/assets/logo.svg"
+        alt="youtube logo"
+        width="200"
+      />
+    <form [formGroup]="addUser">
+      
+        <input type="text" placeholder="FirstName" formControlName="firstname" />
+        <input type="text" placeholder="LastName" formControlName="lastname" />
+        <input type="text" formControlName="email" placeholder="email" />
+        <!-- <input type="text" formControlName="imageurl" placeholder="Image Url" /> -->
+        <input type="text" formControlName="password" placeholder="password" />
+      
+
+      
+
+      <!-- <button type="submit" class="submit-button" [mat-dialog-close]="addUser.value" 
+      (click)="postUser(selectedUser)" [disabled]="addUser.invalid">Sign Up</button> -->
+
+              <button type="submit" class="submit-button" (click)="postUser(selectedUser)" [disabled]="addUser.invalid">
+        REGISTER
+      </button>
+      <p class="message">
+        Already registered? <a routerLink="/login">Sign In</a>
+      </p>
+    </form>
+  </div>
+</div>
+</div>
+<!-- </section> -->

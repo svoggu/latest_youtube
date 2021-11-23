@@ -1,0 +1,26 @@
+<!-- <p>upload works!</p> -->
+<div class="container">
+<h1 >Upload Videos! or Images! </h1>
+
+<input type="file" (change)="Upload($event)">
+
+<button class="button" type="button" (click) = "onUpload()">Upload</button>
+
+<hr>
+<h1>View Gallery</h1>
+</div>
+<ul >
+    <li *ngFor='let file of files'>
+        <!-- <span style="display: flex;"> -->
+        <a [href]="'http://localhost:3504/image/' +file.filename" [download]="file.filename" >{{file.filename}}</a>
+        
+        <button (click)="stream(file.filename)" *ngIf="file.contentType.includes('video')">Play</button>
+      
+        <button (click)="delete(file._id)">Delete</button> <br><br>
+   
+        <img *ngIf="file.contentType.includes('image')" [src]="'http://localhost:3504/image/' +file.filename" width="250" alt="" class="img-responsive">
+        <hr>
+    <!-- </span> -->
+    </li>
+
+</ul>

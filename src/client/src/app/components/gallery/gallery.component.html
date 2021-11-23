@@ -1,0 +1,8 @@
+<!-- <p>gallery works!</p> -->
+<h1 style="margin-left: 120px">Here is Your Favourite Video!</h1>
+{{filename}}
+<ng-container *ngIf="filename">
+  <video id="videoPlayer" width="650" controls muted="muted" autoplay>
+    <source [src]="'http://localhost:3504/image/' + filename" type="video/mp4" />
+  </video>
+</ng-container>

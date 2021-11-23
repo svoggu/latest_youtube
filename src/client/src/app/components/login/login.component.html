@@ -1,0 +1,37 @@
+<div class="app">
+  <div class="login-page">
+    <div class="form">
+      <img
+        class="header__logo"
+        src="/assets/logo.svg"
+        alt="youtube logo"
+        width="200"
+      />
+    <!-- </div> -->
+    <!-- <div class="login__header__right"> -->
+      <!-- <mat-card class="login__header__right__card"> -->
+        <!-- <mat-card-content class="login__header__right__card__content"> -->
+          <form [formGroup]="loginForm" class="login-form">
+            <input type="text" formControlName="email" placeholder="email"  />
+            
+            <input type="password" formControlName="password" placeholder="password" />
+            
+            <button (click)="login()" class="login-button">Login</button>
+         
+                    
+          <!-- <button class="create-account" (click)="openRegister()">Create New Account</button> -->
+          
+        <!-- </mat-card-content> -->
+      <!-- </mat-card> -->
+
+      <p class="message">
+        Not registered? <a routerLink="/register">Create an account</a>
+        <!-- Not registered? <a (click)="openRegister()">Create an account</a> -->
+
+      </p>
+
+    </form>
+    </div>
+  </div>
+
+</div>
