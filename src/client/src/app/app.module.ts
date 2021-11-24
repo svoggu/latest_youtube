@@ -31,6 +31,7 @@ import { RowsComponent } from './components/rows/rows.component';
 import { VideoComponent } from './components/video/video.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     VideoComponent,
     UploadComponent,
     GalleryComponent,
+    SearchComponent,
     
    
   ],

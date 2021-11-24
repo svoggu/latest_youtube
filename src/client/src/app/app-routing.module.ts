@@ -14,6 +14,7 @@ import { RowsComponent } from './components/rows/rows.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { CreateProfileComponent } from './components/create-profile/create-profile.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
@@ -73,6 +74,11 @@ const routes: Routes = [
   {
     path: 'create-profile',
     component: CreateProfileComponent,
+  },
+
+  {
+    path: 'search',
+    component: SearchComponent,
   }
   
 ];
