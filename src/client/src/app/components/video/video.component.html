@@ -1,4 +1,4 @@
-<p>Video</p>
+<!-- <p>Video</p> -->
 <div class="home">
   <mat-card class="card" *ngFor="let video of videoService.filteredVideos">
     <a [href]="video.url">
@@ -18,8 +18,8 @@
 
     <mat-card-subtitle>
       <mat-card-title>
-        <a style="font-size: 14px; text-decoration: none" [href]="video.authorurl">{{video.author}}</a>
-        <span style="font-size: 13px"> {{ video.views }}</span>
+        <a style="font-size: 14px; color:black;text-decoration: none" [href]="video.authorurl">{{video.author}}</a>
+        <br><span style="font-size: 13px"> {{ video.views }}</span>
       </mat-card-title>
     </mat-card-subtitle>
   </mat-card>
