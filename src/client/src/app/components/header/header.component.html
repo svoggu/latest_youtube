@@ -33,8 +33,15 @@
         <!-- <mat-icon class="header__icon">search</mat-icon>
     </button> -->
     <!-- </form> -->
+    <div class="header__middle">
     <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (keyup)="onSearch()" />
-
+    <button
+    class="header__searchBtn"
+    type="submit">
+    <mat-icon class="header__icon">search</mat-icon>
+  </button>
+    
+</div>
 
     <div class="header__right">
         <mat-icon
