@@ -9,8 +9,18 @@
 <hr>
 <h1>View Gallery</h1>
 </div>
+ <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+          placeholder="search"
+        /> 
+       
 <ul >
+    <div class="galery"> 
     <li *ngFor='let file of files'>
+    
         <!-- <span style="display: flex;"> -->
         <a [href]="'http://localhost:3504/image/' +file.filename" [download]="file.filename" >{{file.filename}}</a>
         
@@ -22,5 +32,6 @@
         <hr>
     <!-- </span> -->
     </li>
-
+</div>
 </ul>
+

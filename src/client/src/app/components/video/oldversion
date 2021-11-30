@@ -1,0 +1,70 @@
+  
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading">Recommended</div>
+      <div class="panel-body" >
+        <div class="row">
+          <div class="col-sm-4">
+            <h5> How To Manage User Roles In Node.js</h5>
+            <!-- 4:3 aspect ratio -->
+           
+            <div class="embed-responsive embed-responsive-4by3" >
+              <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7TF00hJI78Y"></iframe> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/jI4K7L-LI58"
+               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+               encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h5>$group and $count - MongoDB Aggregation Tutorial</h5>
+            <div class="embed-responsive embed-responsive-4by3">
+              <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/n-AvAxGji6c"></iframe> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qj-yUH_zg0U"
+               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+               encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h5>Learn Regular Expressions In 20 Minutes</h5>
+            <div class="embed-responsive embed-responsive-4by3">
+              <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oMj95u2zK4Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>"></iframe> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/rhzKDrUiJVk" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+               encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+       <hr />
+        <div class="row">
+          <div class="col-sm-4">
+            <h5>Angular Material Tutorial </h5>
+            <!-- 4:3 aspect ratio -->
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/bV8emCBmFHk" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h5>Stripe Elements & Checkout with Angular - Monetize your PWA </h5>
+            <div class="embed-responsive embed-responsive-4by3">
+              <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WqCQq31ORFk"></iframe> -->
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/zTj0FZHunNE" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h5>Angular CLI & important Commands </h5>
+            <div class="embed-responsive embed-responsive-4by3">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kvJYjvoncak"
+               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+               encrypted-media; gyroscope; picture-in-picture" allowfullscreen>"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+     
+        

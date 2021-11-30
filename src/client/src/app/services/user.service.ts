@@ -3,7 +3,7 @@ import { ApiService } from './api.service';
 import { catchError, map, tap } from 'rxjs/operators';
 import { User } from '../../../../shared/models/user.model';
 import { Router } from '@angular/router';
-import { of } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 import { Post } from '../../../../shared/models/post.model';
 import { Tweet } from '../../../../shared/models/profile.model';
 
@@ -12,7 +12,8 @@ import { Tweet } from '../../../../shared/models/profile.model';
 })
 export class UserService {
   selectedUserId = '';
-
+  public search = new BehaviorSubject<string>("");
+  
   constructor(private api: ApiService, 
     private router: Router) {}
 

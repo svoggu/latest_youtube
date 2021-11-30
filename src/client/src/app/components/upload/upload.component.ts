@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
+import { UserService } from 'src/app/services/user.service';
 import { AppState } from 'src/app/store';
 import { loadTweets } from 'src/app/store/actions/user/user.actions';
 // import { UserTweetSelector } from 'src/app/store/selectors/user/user.selectors';
@@ -18,13 +19,14 @@ export class UploadComponent {
     //  tweets$: Observable<Tweet[]>;
     //   selectedFile = null;
     //   images: any;
-
+    public searchTerm: string = '';
       file: File | null = null;  
       files: any = [];
 
       constructor(private http: HttpClient,
         private store: Store<AppState>,
-        private router: Router,) { 
+        private router: Router,
+        private userService: UserService) { 
           
     //       this.store.dispatch(loadTweets());
     // this.tweets$ = this.store.select(UserTweetSelector);
@@ -65,6 +67,12 @@ export class UploadComponent {
 
   delete(id: string){
     this.http.post<any>('http://localhost:3504/files/del/' + id, null).subscribe(files => this.files = files);
+  }
+
+  search(event: any) {
+    this.searchTerm = (event.target as HTMLInputElement).value;
+    console.log(this.searchTerm);
+    this.userService.search.next(this.searchTerm);
   }
  
 }

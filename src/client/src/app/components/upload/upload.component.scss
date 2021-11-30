@@ -1,9 +1,19 @@
 .container{
     text-align: center;
-   
+    
 }
 
 .button{
     background-color: red;
     color: white;
+}
+
+input{
+    width: 200px;
+    margin: 30px;
+}
+
+.gallery{
+    display:flex;
+    flex: .5;
 }

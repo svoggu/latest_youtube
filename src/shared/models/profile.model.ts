@@ -1,9 +1,9 @@
-// import * as mongoose from 'mongoose';
-// export interface Profile {
-//     _id: string;
-//     name: string;
-//     imagePath: string;
-//   }
+import * as mongoose from 'mongoose';
+export interface Profile {
+    _id: string;
+    name: string;
+    imagePath: string;
+  }
 
 import { User } from "./user.model.js";
 
