@@ -46,20 +46,20 @@ export class VideoService {
     },
     {
       id: '2',
-      type: 'Movies',
-      name: 'House Of The Dragon | Official Teaser',
-      author: 'HBO Max',
-      url: 'https://www.youtube.com/watch?v=fNwwt25mheo',
-      authorurl: 'https://www.youtube.com/channel/UCx-KWLTKlB83hDI6UKECtJQ',
+      type: 'Educational',
+      name: 'How To Manage User Roles In Node.js',
+      author: 'Web Dev Simplified',
+      url: 'https://youtu.be/jI4K7L-LI58',
+      authorurl: 'https://youtu.be/KXX7QSz7X6I',
       avatarurl:
-        'https://yt3.ggpht.com/ytc/AKedOLQT2zOlOqmyG0ocscCQhhAZ6MCxPzoI3lnSBzKclg=s88-c-k-c0x00ffffff-no-rj',
+        'https://yt3.ggpht.com/ytc/AKedOLQpvSjzSCSo8ZKCjBZS7TRX7omb_kyQirh2zgEY=s48-c-k-c0x00ffffff-no-rj',
       pictureurl:
         'https://i.ytimg.com/vi/fNwwt25mheo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCd3Z8XFj9aXk5TyrRllra86sEtVg',
-      views: '4.8M views',
+      views: '5.2K views',
     },
     {
       id: '3',
-      type: 'Sports',
+      type: 'Educational',
       name: 'Rams vs. Seahawks Week 5 Highlights',
       author: 'NFL',
       url: 'https://www.youtube.com/watch?v=BsKtDfMjHEo&',
@@ -72,7 +72,7 @@ export class VideoService {
     },
     {
       id: '4',
-      type: 'Cars',
+      type: 'Educational',
       name: 'Flame Spitting R35 GTR in [4K]',
       author: 'Woyshnis Media',
       authorurl: 'https://www.youtube.com/channel/UCk55DOnuAgOiFnBj-0XXwGQ',
@@ -85,7 +85,7 @@ export class VideoService {
     },
     {
       id: '5',
-      type: 'Food',
+      type: 'Educational',
       name: "Gordon's Quick & Simple Dinner Recipes",
       author: 'Gordon Ramsay',
       authorurl: 'https://www.youtube.com/channel/UCIEv3lZ_tNXHzL3ox-_uUGQ',
@@ -98,7 +98,7 @@ export class VideoService {
     },
     {
       id: '6',
-      type: 'Games',
+      type: 'Educational',
       name: 'Forza Horizon 5 - The Final Preview',
       author: 'IGN',
       authorurl: 'https://www.youtube.com/c/IGN',
@@ -111,7 +111,7 @@ export class VideoService {
     },
     {
       id: '7',
-      type: 'Travel',
+      type: 'Educational',
       name: 'Big Sur: 8 Things to do on a Road Trip',
       author: 'California Through My Lens',
       authorurl: 'https://www.youtube.com/channel/UCZFRs1R9ECKDwnLy5IQzwkg',
@@ -176,7 +176,7 @@ export class VideoService {
     },
     {
       id: '12',
-      type: 'Sports',
+      type: 'kids',
       name: 'UFC 259 : Israel Adesanya VS Paulo Costa',
       author: 'MMA CENTER',
       authorurl: 'https://www.youtube.com/channel/UCyZ5atg3BWVCAbGA8gmwoHw',
@@ -189,7 +189,7 @@ export class VideoService {
     },
     {
       id: '13',
-      type: 'Cars',
+      type: 'kids',
       name: 'F9 - Official Trailer [HD] | The Fast Saga',
       author: 'The Fast Saga',
       authorurl: 'https://www.youtube.com/channel/UCJCx8aQrdx_ueXPmxTD2odQ',
@@ -202,7 +202,7 @@ export class VideoService {
     },
     {
       id: '14',
-      type: 'Food',
+      type: 'kids',
       name: 'Brooklyn is Pizza Heaven | Munchies',
       author: 'Munchies',
       authorurl: 'https://www.youtube.com/channel/UCaLfMkkHhSA_LaCta0BzyhQ',
@@ -215,7 +215,7 @@ export class VideoService {
     },
     {
       id: '15',
-      type: 'Travel',
+      type: 'kids',
       name: 'Santorini (Greece) - Impressions & Sunset',
       author: 'Luxury Travel Expert',
       url: 'https://www.youtube.com/watch?v=cKedc8trR2Y',

@@ -26,13 +26,20 @@ console.log(access_secret);
 const saltRounds = 10;
 
 const app = express();
-const PORT = 3504;
+
+const PORT = 3000;
+
+const __dirname = path.resolve();
+const clientPath = path.join(__dirname, '/dist/client');
+app.use(express.static(clientPath));
+console.log(clientPath);
+
 let gfs: GridFSBucket;
 
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:4204", "http://localhost:3504"],
+    origin: ["http://localhost:4204", "http://localhost:3000"],
   })
 );
 
@@ -77,11 +84,11 @@ app.get("/", function (req, res) {
   res.json({ message: "test" });
 });
 
-app.post("/upload", upload.single("file"), (req, res) => {
+app.post("/api/upload", upload.single("file"), (req, res) => {
   res.redirect("/");
  });
 
-app.get("/files", (req, res) => {
+app.get("/api/files", (req, res) => {
   console.log("get files");
   gfs.find().toArray((err, files) => {
     if (!files || files.length === 0) {
@@ -93,7 +100,7 @@ app.get("/files", (req, res) => {
   });
 });
 
-app.get("/image/:filename", (req, res) => {
+app.get("/api/image/:filename", (req, res) => {
   console.log("get image");
   console.log(req.params.filename);
   gfs
@@ -111,7 +118,7 @@ app.get("/image/:filename", (req, res) => {
     });
 });
 
-app.post("/files/del/:id", (req, res) => {
+app.post("/api/files/del/:id", (req, res) => {
   gfs.delete(new mongoose.Types.ObjectId(req.params.id), (err, data) => {
     if (err) return res.status(404).json({ err: err.message });
     res.redirect("/");
@@ -147,7 +154,7 @@ app.post("/create-tweet", authHandler, function (req: any, res) {
     });
 });
 
-app.get("/posts", function (req, res) {
+app.get("/api/posts", function (req, res) {
   PostModel.find()
     .then((data) => res.json({ data }))
     .catch((err) => {
@@ -156,7 +163,7 @@ app.get("/posts", function (req, res) {
     });
 });
 
-app.post("/create-post", function (req, res) {
+app.post("/api/create-post", function (req, res) {
   const { message } = req.body;
   const post = new PostModel({
     message,
@@ -173,7 +180,7 @@ app.post("/create-post", function (req, res) {
     });
 });
 
-app.get("/users", authHandler, function (req: any, res) {
+app.get("/api/users", authHandler, function (req: any, res) {
   UserModel.find({}, "-password")
     .then((data) => res.json({ data }))
     .catch((err) => {
@@ -182,7 +189,7 @@ app.get("/users", authHandler, function (req: any, res) {
     });
 });
 
-app.post("/create-user", function (req, res) {
+app.post("/api/create-user", function (req, res) {
   const { firstname, email, lastname, password } = req.body;
 
   bcrypt.genSalt(saltRounds, function (err, salt) {
@@ -207,7 +214,7 @@ app.post("/create-user", function (req, res) {
   });
 });
 
-app.delete("/delete-user/:id", function (req, res) {
+app.delete("/api/delete-user/:id", function (req, res) {
   const _id = req.params.id;
   UserModel.findByIdAndDelete(_id).then((data) => {
     console.log(data);
@@ -215,7 +222,7 @@ app.delete("/delete-user/:id", function (req, res) {
   });
 });
 
-app.put("/update-user/:id", function (req, res) {
+app.put("/api/update-user/:id", function (req, res) {
   console.log("Update user");
   UserModel.findByIdAndUpdate(
     req.params.id,
@@ -235,7 +242,7 @@ app.put("/update-user/:id", function (req, res) {
   );
 });
 
-app.get("/logout", authHandler, function (req, res) {
+app.get("/api/logout", authHandler, function (req, res) {
   res.cookie("jwt", "", {
     httpOnly: true,
     maxAge: 60 * 60 * 1000,
@@ -243,7 +250,7 @@ app.get("/logout", authHandler, function (req, res) {
   res.json({ message: "Successfully Logged out" });
 });
 
-app.post("/login", function (req, res) {
+app.post("/api/login", function (req, res) {
   const { email, password } = req.body;
 
   UserModel.findOne({ email }).lean()
@@ -269,7 +276,7 @@ app.post("/login", function (req, res) {
     });
 });
 
-app.get("/check-login", authHandler, (req, res) => {
+app.get("/api/check-login", authHandler, (req, res) => {
   res.json({ message: "yes" })
 });
 
