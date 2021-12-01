@@ -23,6 +23,7 @@ export class FbGuardGuard implements CanActivate {
     ('check-login').pipe( map((data) => 
     data.message === 'yes')).pipe(catchError(err => {
       alert("login first")
+      this.router.navigate(['/login']);
       return of(false)}))
     }
 

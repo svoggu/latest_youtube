@@ -12,7 +12,8 @@ export class VideoService {
       this.filteredVideos = this.shuffle(this.videoList);
     } else {
       this.filteredVideos = this.videoList.filter((video) =>
-        video.name.toLowerCase().includes(search.toLowerCase())
+        video.name.toLowerCase().includes(search.toLowerCase()) || 
+        video.type.toLowerCase().includes(search.toLowerCase())
       );
     }
   }
@@ -55,33 +56,33 @@ export class VideoService {
         'https://yt3.ggpht.com/ytc/AKedOLQpvSjzSCSo8ZKCjBZS7TRX7omb_kyQirh2zgEY=s48-c-k-c0x00ffffff-no-rj',
       pictureurl:
         'https://i.ytimg.com/vi/fNwwt25mheo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCd3Z8XFj9aXk5TyrRllra86sEtVg',
-      views: '5.2K views',
+      views: '154,405 views',
     },
     {
       id: '3',
       type: 'Educational',
-      name: 'Rams vs. Seahawks Week 5 Highlights',
-      author: 'NFL',
-      url: 'https://www.youtube.com/watch?v=BsKtDfMjHEo&',
-      authorurl: 'https://www.youtube.com/user/NFL',
+      name: 'MEAN Stack (Angular 10) Tutorial',
+      author: 'Djamware',
+      url: 'https://www.youtube.com/watch?v=-ZSgcRvdvGc',
+      authorurl: 'https://www.youtube.com/channel/UCtI81hYLh2Ae_45KHkyy0vw',
       avatarurl:
-        'https://yt3.ggpht.com/ytc/AKedOLQQ8np3nnw8dP1yLcnsSIcCbE_aU5YjrA-WyqAsXGk=s68-c-k-c0x00ffffff-no-rj',
+        'https://yt3.ggpht.com/ytc/AKedOLTA6cEEFmHDXgrK4AVDOZc5xRxtEIcGGgyBCb4-=s68-c-k-c0x00ffffff-no-rj',
       pictureurl:
-        'https://i.ytimg.com/vi/BsKtDfMjHEo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6mVVppLA0D9WOxZ8cUSwOYhlWzw',
+        'https://i.ytimg.com/vi/-ZSgcRvdvGc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDE2uNYid50rcGMdqt9zXbn3waxjg',
       views: '2.4M views',
     },
     {
       id: '4',
       type: 'Educational',
-      name: 'Flame Spitting R35 GTR in [4K]',
-      author: 'Woyshnis Media',
-      authorurl: 'https://www.youtube.com/channel/UCk55DOnuAgOiFnBj-0XXwGQ',
-      url: 'https://www.youtube.com/watch?v=vlDOjTaaEdA',
+      name: 'Angular Crash Course 2021',
+      author: ' TRAVERSYMEDIA ',
+      authorurl: 'https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA',
+      url: 'https://www.youtube.com/watch?v=3dHNOWTI7H8',
       avatarurl:
-        'https://yt3.ggpht.com/ytc/AKedOLTIIrDSyv8z8bWCF4t-y6MaMUQ9rgbbYCQX6U4ftjY=s68-c-k-c0x00ffffff-no-rj',
+        'https://yt3.ggpht.com/ytc/AKedOLSxHOOxxa9Af8Bfb2XMop3lm4tor9bViWiC-d5aaw=s48-c-k-c0x00ffffff-no-rj',
       pictureurl:
-        'https://i.ytimg.com/vi/vlDOjTaaEdA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCId19ZFBfY2TZsR4TpNs_i5Gv2Mg',
-      views: '1M views',
+        'https://i.ytimg.com/vi/3dHNOWTI7H8/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEwivMXmvNYkVBMxiUNIOM-j3MLQ',
+      views: '461,167 views',
     },
     {
       id: '5',
