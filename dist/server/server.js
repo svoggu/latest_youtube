@@ -107,7 +107,7 @@ app.post("/api/files/del/:id", (req, res) => {
         res.redirect("/");
     });
 });
-app.get("/tweets", function (req, res) {
+app.get("/api/tweets", function (req, res) {
     TweetModel.find()
         .then((data) => res.json({ data }))
         .catch((err) => {
@@ -115,7 +115,7 @@ app.get("/tweets", function (req, res) {
         res.json({ errors: err });
     });
 });
-app.post("/create-tweet", authHandler, function (req, res) {
+app.post("/api/create-tweet", authHandler, function (req, res) {
     const { text, img, _id, likes, disLikes } = req.body;
     const newTweet = new TweetModel({
         text,
