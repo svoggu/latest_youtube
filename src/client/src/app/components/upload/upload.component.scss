@@ -13,7 +13,11 @@ input{
     margin: 30px;
 }
 
-.gallery{
-    display:flex;
-    flex: .5;
-}
+.home {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    font-size: medium;
+    align-items: center;
+    text-decoration: none;
+    
+  }

@@ -39,7 +39,7 @@ const routes: Routes = [
   },
   
   {
-    path: 'home', 
+    path: '', 
     // component: HomeComponent,canActivate: [FbGuardGuard],
     component: HomeComponent,
   },

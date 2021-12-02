@@ -44,10 +44,10 @@
 </div>
 
     <div class="header__right">
-        <mat-icon
+        UPLOAD<mat-icon
           class="header__icon"
           routerLink="/upload"
-          title="create new event"
+          title="upload videos"
           >open_in_new
         </mat-icon>
         <mat-icon class="header__icon">video_call</mat-icon>
@@ -55,10 +55,10 @@
         <mat-icon class="header__icon">notifications</mat-icon>
 
         <img
-          [routerLink]="['/profile']"
+          [routerLink]="['/login']"
           [src]="user?.photoURL"
           class="mat-card-avatar"
-          title="Profile"
+          title="Login"
         />
     </div>
 </div>
