@@ -55,8 +55,8 @@ export class VideoService {
       avatarurl:
         'https://yt3.ggpht.com/ytc/AKedOLQpvSjzSCSo8ZKCjBZS7TRX7omb_kyQirh2zgEY=s48-c-k-c0x00ffffff-no-rj',
       pictureurl:
-        'https://i.ytimg.com/vi/fNwwt25mheo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCd3Z8XFj9aXk5TyrRllra86sEtVg',
-      views: '154,405 views',
+        'https://i.ytimg.com/vi/jI4K7L-LI58/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==\u0026rs=AOn4CLD5unz5FK4s4mmCOzUiypO4r2UYEQ',
+      views: '5.2K views',
     },
     {
       id: '3',
@@ -87,32 +87,33 @@ export class VideoService {
     {
       id: '5',
       type: 'Educational',
-      name: "Gordon's Quick & Simple Dinner Recipes",
-      author: 'Gordon Ramsay',
-      authorurl: 'https://www.youtube.com/channel/UCIEv3lZ_tNXHzL3ox-_uUGQ',
-      url: 'https://www.youtube.com/watch?v=X_qo3lnRS1k',
+      name: "Find Video Thumbnail URL",
+      author: 'CHRIS PALMER SEO',
+      authorurl: 'https://www.youtube.com/channel/UC8P0dc0Zn2gf8L6tJi_k6xg',
+      url: 'https://www.youtube.com/watch?v=vx5dSS3BBOk',
       avatarurl:
-        'https://yt3.ggpht.com/bFpwiiOB_NLCVsIcVQ9UcwBjb1RzipnMmtNfLSWpeIaHboyGkBCq4KBitmovRbStk9WvIWIZOyo=s68-c-k-c0x00ffffff-no-rj',
+      'https://yt3.ggpht.com/JQVs7FuJw_UZvjPcol2DHHz35f2JEN3Zt5cdgGbidRzUqdT_uHGQjj5HE7iYnIsRJvrldZd9XQ=s48-c-k-c0x00ffffff-no-rj', 
       pictureurl:
-        'https://i.ytimg.com/vi/X_qo3lnRS1k/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvlFGi-uAQFQ36kSYN3BwaO2sOOw',
-      views: '16.3M views',
+      "https://i.ytimg.com/vi/vx5dSS3BBOk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs",
+      // 'https://i.ytimg.com/vi/vx5dSS3BBOk/hqdefault.jpg?sqp ... ',
+      views: '24,815  views',
     },
     {
       id: '6',
       type: 'Educational',
-      name: 'Forza Horizon 5 - The Final Preview',
-      author: 'IGN',
-      authorurl: 'https://www.youtube.com/c/IGN',
-      url: 'https://www.youtube.com/watch?v=AHDj_hL4x6c',
+      name: 'Stripe Elements & Checkout with Angular',
+      author: 'Fireship',
+      authorurl: 'https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA',
+      url: 'https://www.youtube.com/watch?v=zTj0FZHunNE',
       avatarurl:
-        'https://yt3.ggpht.com/H_---ano_f27DOCejDhUdBMtBcxcv32MoXmFKQc_mBcxYSH4HPZTGuBUdm7UgI5VlutMOVX2=s68-c-k-c0x00ffffff-no-rj',
+      'https://yt3.ggpht.com/ytc/AKedOLTcIl6kKt3lEPJEySUf_hpHiKDKiFeo9eWPReLysQ=s48-c-k-c0x00ffffff-no-rj', 
       pictureurl:
-        'https://i.ytimg.com/vi/AHDj_hL4x6c/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBjNSrVt_-rcAR0yV2bRBM6zMwwgA',
-      views: '158K views',
+      'https://i.ytimg.com/vi/zTj0FZHunNE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLB7NahpOEUEC-caKb1NJUCrJxXA1g', 
+      views: '42,246 views',
     },
     {
       id: '7',
-      type: 'Educational',
+      type: 'Travel',
       name: 'Big Sur: 8 Things to do on a Road Trip',
       author: 'California Through My Lens',
       authorurl: 'https://www.youtube.com/channel/UCZFRs1R9ECKDwnLy5IQzwkg',
@@ -164,7 +165,7 @@ export class VideoService {
     },
     {
       id: '11',
-      type: 'Coding',
+      type: 'Educational',
       name: 'Angular ngrx Redux Quick Start Tutorial',
       author: 'Fireship',
       authorurl: 'https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA',
@@ -283,15 +284,15 @@ export class VideoService {
     {
       id: '20',
       type: 'Travel',
-      name: 'New York in 8K ULTRA HD - Capital of Earth',
-      author: '8K World',
-      authorurl: 'https://www.youtube.com/channel/UC4CAxaO75mfkPr3GRiSGE_w',
-      url: 'https://www.youtube.com/watch?v=h3fUgOKFMNU',
+      name: 'Hidden Gems & Secret Spots,SANDIEGO',
+      author: 'Jaycation',
+      authorurl: 'https://www.youtube.com/channel/UCaJYATsZxIJuJfLmCo4aj6Q',
+      url: 'https://www.youtube.com/watch?v=OXOVOeSFjus',
       avatarurl:
-        'https://yt3.ggpht.com/ytc/AKedOLSS1lyM1dY-UqjVb023wncf64ON14K9N6zQwSVH=s68-c-k-c0x00ffffff-no-rj',
+        'https://yt3.ggpht.com/ytc/AKedOLTA6ORFTC4rSL1NLaDUMExV74-K6cWa2KhD4YRewCo=s48-c-k-c0x00ffffff-no-rj',
       pictureurl:
-        'https://i.ytimg.com/vi/h3fUgOKFMNU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBEq5NaJBKogW2H6u32uVbXLDUycw',
-      views: '5.4M views',
+        'https://i.ytimg.com/vi/OXOVOeSFjus/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLDFvIw8kDmg4DnlyUIIbq1eTLrWtg',
+      views: '206,437  views',
     },
     {
       id: '21',
@@ -308,16 +309,16 @@ export class VideoService {
     },
     {
       id: '22',
-      type: 'Game',
-      name: 'How to Spend 14 Days in Japan | Travel Guide',
-      author: 'Allan Su',
-      authorurl: 'https://www.youtube.com/channel/UCEt1Ef_TQfkaEmjRmOWiFog',
-      url: 'https://www.youtube.com/watch?v=IuTDuvYr7f0',
+      type: 'Travel',
+      name: 'SEAPORT VILLAGE IN SAN DIEGO',
+      author: 'MattEoh90',
+      authorurl: 'https://www.youtube.com/channel/UCf9Nr3bNtxBILfOf2Y9wU9Q',
+      url: 'https://www.youtube.com/watch?v=qNiXuRklHf8',
       avatarurl:
-        'https://yt3.ggpht.com/ytc/AKedOLQEiRT754TD46npSu_cpdcWP2mus1_hLBy1QGI9KQ=s68-c-k-c0x00ffffff-no-rj',
+        'https://yt3.ggpht.com/ytc/AKedOLQ5K1TA__jHDZsM-xT2TKzN_PN9rWq2hmAJafs17w=s48-c-k-c0x00ffffff-no-rj',
       pictureurl:
-        'https://i.ytimg.com/vi/IuTDuvYr7f0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAg2F2V_V_v7XcJ4EEbLTbwdEDSfg',
-      views: '2.4M views',
+        'https://i.ytimg.com/vi/qNiXuRklHf8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG\u0026rs=AOn4CLBxykUPN',
+      views: '124  views',
     },
     {
       id: '23',
