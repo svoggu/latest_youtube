@@ -79,9 +79,9 @@ const storage = new GridFsStorage({
 });
 
 const upload = multer({ storage: storage });
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
-app.get("/", function (req, res) {
+app.get("/api/", function (req, res) {
   res.json({ message: "test" });
 });
 
@@ -286,10 +286,10 @@ let io = new Server(server, {
   cors: { origin: ["http://localhost:4204"] },
 });
 
-io.on("connection", (socket) => {
-  console.log("a user connected");
-  socket.emit("user tweet", "here is my tweet");
-});
+// io.on("connection", (socket) => {
+//   console.log("a user connected");
+//   socket.emit("user tweet", "here is my tweet");
+// });
 
 app.listen(PORT, function () {
   console.log(`starting at localhost http://localhost:${PORT}`);

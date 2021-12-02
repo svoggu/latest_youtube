@@ -8,30 +8,22 @@
 
 <hr>
 <h1>View Gallery</h1>
-</div>
- <input
-          type="text"
-          class="form-control"
-          [(ngModel)]="searchTerm"
-          (keyup)="search($event)"
-          placeholder="search"
-        /> 
        
 <ul >
-    <div class="galery"> 
+    
     <li *ngFor='let file of files'>
     
-        <!-- <span style="display: flex;"> -->
-        <a [href]="'http://localhost:3504/image/' +file.filename" [download]="file.filename" >{{file.filename}}</a>
+       
+        <a [href]="'http://localhost:3000/api/image/' +file.filename" [download]="file.filename" >{{file.filename}}</a>
         
         <button (click)="stream(file.filename)" *ngIf="file.contentType.includes('video')">Play</button>
       
         <button (click)="delete(file._id)">Delete</button> <br><br>
    
-        <img *ngIf="file.contentType.includes('image')" [src]="'http://localhost:3504/image/' +file.filename" width="250" alt="" class="img-responsive">
+        <img *ngIf="file.contentType.includes('image')" [src]="'http://localhost:3000/api/image/' +file.filename" width="250" alt="" class="img-responsive">
         <hr>
-    <!-- </span> -->
+    
     </li>
-</div>
+
 </ul>
 

@@ -6,7 +6,7 @@ import { UserModel } from "./schemas/user.schema.js";
 import mongoose from "mongoose";
 import multer from "multer";
 import { GridFsStorage } from "multer-gridfs-storage";
-import "body-parser";
+import bodyParser from "body-parser";
 import jwt from "jsonwebtoken";
 import cookieParser from "cookie-parser";
 import path from "path";
@@ -66,8 +66,8 @@ const storage = new GridFsStorage({
     },
 });
 const upload = multer({ storage: storage });
-// app.use(bodyParser.json());
-app.get("/", function (req, res) {
+app.use(bodyParser.json());
+app.get("/api/", function (req, res) {
     res.json({ message: "test" });
 });
 app.post("/api/upload", upload.single("file"), (req, res) => {
@@ -248,10 +248,10 @@ const server = createServer(app);
 let io = new Server(server, {
     cors: { origin: ["http://localhost:4204"] },
 });
-io.on("connection", (socket) => {
-    console.log("a user connected");
-    socket.emit("user tweet", "here is my tweet");
-});
+// io.on("connection", (socket) => {
+//   console.log("a user connected");
+//   socket.emit("user tweet", "here is my tweet");
+// });
 app.listen(PORT, function () {
     console.log(`starting at localhost http://localhost:${PORT}`);
 });

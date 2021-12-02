@@ -52,13 +52,13 @@ export class UploadComponent {
     }
     const fd = new FormData();
     fd.append('file', this.file);
-    this.http.post<any>('http://localhost:3504/upload', fd)
+    this.http.post<any>('http://localhost:3000/api/upload', fd)
     .subscribe();
     this.file = null;
   }
 
   getFiles() {
-    this.http.get<any>('http://localhost:3504/files').subscribe(files => this.files = files);
+    this.http.get<any>('http://localhost:3000/api/files').subscribe(files => this.files = files);
   }
 
   stream(filename: string){
@@ -66,7 +66,7 @@ export class UploadComponent {
   }
 
   delete(id: string){
-    this.http.post<any>('http://localhost:3504/files/del/' + id, null).subscribe(files => this.files = files);
+    this.http.post<any>('http://localhost:3000/api/files/del/' + id, null).subscribe(files => this.files = files);
   }
 
   search(event: any) {
