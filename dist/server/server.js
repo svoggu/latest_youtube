@@ -21,6 +21,7 @@ import "mongodb";
 dotenv.config();
 const access_secret = process.env.ACCESS_TOKEN_SECRET;
 console.log(access_secret);
+const MONGO_URI = process.env.MONGO_URI;
 const saltRounds = 10;
 const app = express();
 // const PORT = 3000;
@@ -36,9 +37,9 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use(express.json());
-const mongoURI = "mongodb://localhost:27017/youtubedb";
+// const mongoURI = "mongodb://localhost:27017/youtubedb";
 mongoose
-    .connect(mongoURI)
+    .connect(MONGO_URI)
     .then(() => {
     console.log("Connected to DB Successfully");
     gfs = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
@@ -48,7 +49,7 @@ mongoose
     .catch((err) => console.log("Failed to Connect to DB", err));
 //Storage
 const storage = new GridFsStorage({
-    url: mongoURI,
+    url: MONGO_URI,
     file: (req, file) => {
         return new Promise((resolve, reject) => {
             crypto.randomBytes(16, (err, buf) => {
