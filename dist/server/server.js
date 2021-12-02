@@ -14,14 +14,14 @@ import crypto from "crypto";
 import dotenv from "dotenv";
 import { authHandler } from "./middleware/auth.middleware.js";
 import "../shared/models/gallery.model.js";
-import { Server } from "socket.io";
+import "socket.io";
 import { createServer } from "http";
 import { TweetModel } from "./schemas/profile.schema.js";
 import "mongodb";
 dotenv.config();
 const access_secret = process.env.ACCESS_TOKEN_SECRET;
 console.log(access_secret);
-const MONGO_URI = process.env.MONGO_URI;
+// const MONGO_URI = process.env.MONGO_URI as string;
 const saltRounds = 10;
 const app = express();
 // const PORT = 3000;
@@ -37,9 +37,9 @@ app.use(cors({
 }));
 app.use(cookieParser());
 app.use(express.json());
-// const mongoURI = "mongodb://localhost:27017/youtubedb";
+const mongoURI = "mongodb://localhost:27017/youtubedb";
 mongoose
-    .connect(MONGO_URI)
+    .connect(`${process.env.MONGO_URI}`)
     .then(() => {
     console.log("Connected to DB Successfully");
     gfs = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
@@ -49,7 +49,7 @@ mongoose
     .catch((err) => console.log("Failed to Connect to DB", err));
 //Storage
 const storage = new GridFsStorage({
-    url: MONGO_URI,
+    url: mongoURI,
     file: (req, file) => {
         return new Promise((resolve, reject) => {
             crypto.randomBytes(16, (err, buf) => {
@@ -246,9 +246,9 @@ app.get("/api/check-login", authHandler, (req, res) => {
     res.json({ message: "yes" });
 });
 const server = createServer(app);
-let io = new Server(server, {
-    cors: { origin: ["http://localhost:4204"] },
-});
+// let io = new Server(server, {
+//   cors: { origin: ["http://localhost:4204"] },
+// });
 // io.on("connection", (socket) => {
 //   console.log("a user connected");
 //   socket.emit("user tweet", "here is my tweet");

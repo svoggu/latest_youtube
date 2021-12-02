@@ -22,7 +22,7 @@ import { GridFSBucket } from "mongodb";
 dotenv.config();
 const access_secret = process.env.ACCESS_TOKEN_SECRET as string;
 console.log(access_secret);
-const MONGO_URI = process.env.MONGO_URI as string;
+// const MONGO_URI = process.env.MONGO_URI as string;
 
 const saltRounds = 10;
 
@@ -48,9 +48,9 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
-// const mongoURI = "mongodb://localhost:27017/youtubedb";
+const mongoURI = "mongodb://localhost:27017/youtubedb";
 mongoose
-  .connect(MONGO_URI)
+  .connect(`${process.env.MONGO_URI}`)
   .then(() => {
     console.log("Connected to DB Successfully");
     gfs = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
@@ -61,7 +61,7 @@ mongoose
 
 //Storage
 const storage = new GridFsStorage({
-  url: MONGO_URI,
+  url: mongoURI,
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
@@ -283,9 +283,9 @@ app.get("/api/check-login", authHandler, (req, res) => {
 });
 
 const server = createServer(app);
-let io = new Server(server, {
-  cors: { origin: ["http://localhost:4204"] },
-});
+// let io = new Server(server, {
+//   cors: { origin: ["http://localhost:4204"] },
+// });
 
 // io.on("connection", (socket) => {
 //   console.log("a user connected");
