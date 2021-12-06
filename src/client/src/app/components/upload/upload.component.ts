@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -23,7 +22,8 @@ export class UploadComponent {
       file: File | null = null;  
       files: any = [];
 
-      constructor(private http: HttpClient,
+      constructor(
+        private api: ApiService,
         private store: Store<AppState>,
         private router: Router,
         private userService: UserService) { 
@@ -52,13 +52,13 @@ export class UploadComponent {
     }
     const fd = new FormData();
     fd.append('file', this.file);
-    this.http.post<any>('http://localhost:3000/api/upload', fd)
+    this.api.post<any, any>('upload', fd)
     .subscribe();
     this.file = null;
   }
 
   getFiles() {
-    this.http.get<any>('http://localhost:3000/api/files').subscribe(files => this.files = files);
+    this.api.get<any>('files').subscribe(files => this.files = files);
   }
 
   stream(filename: string){
@@ -66,13 +66,17 @@ export class UploadComponent {
   }
 
   delete(id: string){
-    this.http.post<any>('http://localhost:3000/api/files/del/' + id, null).subscribe(files => this.files = files);
+    this.api.post<any, any>('files/del/' + id, null).subscribe(files => this.files = files);
   }
 
   search(event: any) {
     this.searchTerm = (event.target as HTMLInputElement).value;
     console.log(this.searchTerm);
     this.userService.search.next(this.searchTerm);
+  }
+
+  get baseUrl(){
+    return this.api.baseUrl;
   }
  
 }

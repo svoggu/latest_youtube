@@ -48,7 +48,6 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
-const mongoURI = "mongodb://localhost:27017/youtubedb";
 mongoose
   .connect(`${process.env.MONGO_URI}`)
   .then(() => {
@@ -61,7 +60,7 @@ mongoose
 
 //Storage
 const storage = new GridFsStorage({
-  url: mongoURI,
+  url: `${process.env.MONGO_URI}`,
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
@@ -94,7 +93,7 @@ app.get("/api/files", (req, res) => {
   console.log("get files");
   gfs.find().toArray((err, files) => {
     if (!files || files.length === 0) {
-      return res.status(404).json({
+      return res.status(403).json({
         err: "no files exist",
       });
     }
@@ -292,6 +291,18 @@ const server = createServer(app);
 //   socket.emit("user tweet", "here is my tweet");
 // });
 
+app.get("/api/*", function (req,res) {
+  res.sendStatus(404);
+});
+
 app.listen(PORT, function () {
   console.log(`starting at localhost http://localhost:${PORT}`);
 });
+
+
+app.all("*", function (req, res) {
+  const filePath = path.join(__dirname, '/dist/client/index.html');
+  console.log(filePath);
+  res.sendFile(filePath);
+  });
+

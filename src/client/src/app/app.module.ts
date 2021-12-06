@@ -32,6 +32,8 @@ import { VideoComponent } from './components/video/video.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { SearchComponent } from './components/search/search.component';
+// import { UploadEffects } from './store/upload/effects/upload.effects';
+// import * as fromUpload from './store/upload/reducers/upload.reducer';
 
 
 @NgModule({
@@ -68,6 +70,7 @@ import { SearchComponent } from './components/search/search.component';
     EffectsModule.forRoot([UserEffects, PostEffects]),
     HomeModule,
     StoreModule.forFeature(fromPost.postFeatureKey, fromPost.reducer),
+    // StoreModule.forFeature(fromUpload.uploadFeatureKey, fromUpload.reducer),
         
   ],
 

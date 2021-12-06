@@ -15,13 +15,13 @@
     <li *ngFor='let file of files'>
     
        
-        <a [href]="'http://localhost:3000/api/image/' +file.filename" [download]="file.filename" >{{file.filename}}</a>
+        <a [href]="baseUrl+'image/'+file.filename" [download]="file.filename" >{{file.filename}}</a>
         
         <button (click)="stream(file.filename)" *ngIf="file.contentType.includes('video')">Play</button>
       
         <button (click)="delete(file._id)">Delete</button> <br><br>
    
-        <img *ngIf="file.contentType.includes('image')" [src]="'http://localhost:3000/api/image/' +file.filename" width="250" alt="" class="img-responsive">
+        <img *ngIf="file.contentType.includes('image')" [src]="baseUrl+'image/' +file.filename" width="250" alt="" class="img-responsive">
         <hr>
     
     </li>
